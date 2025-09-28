@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Лабораторна 4.1 – Горизонтальні рядки</title>
+  <meta name="description" content="Лабораторна робота 4.1: Рух тексту у горизонтальних рядках з різними ефектами">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .line {
+      height: 60px;
+      line-height: 60px;
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+      overflow: hidden;
+      white-space: nowrap;
+      padding-left: 10px;
+    }
+    .line1 { background-color: #ff6666; }
+    .line2 { background-color: #66ccff; }
+    .line3 { background-color: #99cc33; }
+    .line4 { background-color: #ffcc66; }
+    .line5 { background-color: #9966ff; }
+    .marquee {
+      display: inline-block;
+      position: relative;
+    }
+    a.button {
+      display: inline-block;
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      color: white;
+      background-color: #333;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    a.button:hover { background-color: #555; }
+  </style>
+</head>
+<body>
+
+<h1 style="text-align:center; margin:20px 0;">Завдання 4.1 – Горизонтальні рядки</h1>
+
+<!-- 1. Текст коливається -->
+<div class="line line1">
+  <span class="marquee" id="swing">Текст коливається з боку в бік</span>
+</div>
+
+<!-- 2. Текст справа наліво та повторюється -->
+<div class="line line2">
+  <marquee behavior="scroll" direction="left" scrollamount="5">
+    Текст пробігає справа наліво і знову з’являється
+  </marquee>
+</div>
+
+<!-- 3. Текст зліва направо та зупиняється -->
+<div class="line line3">
+  <marquee behavior="slide" direction="right" scrollamount="5">
+    Текст зліва направо та зупиняється
+  </marquee>
+</div>
+
+<!-- 4. Текст з різними режимами запізнення -->
+<div class="line line4">
+  <marquee behavior="scroll" direction="left" scrollamount="2">Повільний текст ліворуч</marquee>
+</div>
+<div class="line line5">
+  <marquee behavior="scroll" direction="left" scrollamount="8">Швидкий текст ліворуч</marquee>
+</div>
+
+<!-- Кнопка назад на головну -->
+<div style="text-align:center;">
+  <a href="index.html" class="button">Назад до головної</a>
+</div>
+
+<script>
+  // Коливання для першого рядка
+  let swing = document.getElementById('swing');
+  let pos = 0;
+  let dir = 1;
+  setInterval(() => {
+    pos += dir * 2; // швидкість коливання
+    if(pos > 100 || pos < 0) dir *= -1;
+    swing.style.transform = `translateX(${pos}px)`;
+  }, 50);
+</script>
+
+</body>
+</html>

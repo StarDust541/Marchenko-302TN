@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Лабораторна 4.2 – Вертикальні рядки</title>
+  <meta name="description" content="Лабораторна робота 4.2: Рух тексту та зображень у вертикальному напрямку">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .vline {
+      height: 120px;
+      width: 200px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      overflow: hidden;
+      position: relative;
+      margin: 15px auto;
+      text-align: center;
+      line-height: 1.5;
+      border-radius: 8px;
+    }
+    .line1 { background-color: #ff6666; }
+    .line2 { background-color: #66ccff; }
+    .line3 { background-color: #99cc33; }
+    .line4 { background-color: #ffcc66; }
+    .line5 { background-color: #9966ff; }
+
+    .vcontent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    a.button {
+      display: inline-block;
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      color: white;
+      background-color: #333;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    a.button:hover { background-color: #555; }
+
+    img {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Завдання 4.2 – Вертикальні рядки</h1>
+
+<!-- 1. Текст та рисунки коливаються -->
+<div class="vline line1">
+  <div class="vcontent" id="vswing">
+    Текст і рисунки коливаються
+  </div>
+</div>
+
+<!-- 2. Рисунки знизу догори, повторюються -->
+<div class="vline line2">
+  <marquee behavior="scroll" direction="up" scrollamount="2">
+    <img src="Video.png" alt="Video">
+    <img src="opera.png" alt="Opera">
+    <img src="proc.jpg" alt="Proc">
+    <img src="mat.jpg" alt="Mat">
+  </marquee>
+</div>
+
+<!-- 3. Рисунки згори вниз, зупинка -->
+<div class="vline line3">
+  <marquee behavior="slide" direction="down">
+    <img src="Video.jpg" alt="Video">
+    <img src="opera.png" alt="Opera">
+    <img src="proc.jpg" alt="Proc">
+    <img src="mat.jpg" alt="Mat">
+  </marquee>
+</div>
+
+<!-- 4. Два рядки з різними режимами запізнення -->
+<div class="vline line4">
+  <marquee behavior="scroll" direction="up" scrollamount="2">
+    Повільний вертикальний текст
+  </marquee>
+</div>
+<div class="vline line5">
+  <marquee behavior="scroll" direction="up" scrollamount="6">
+    Швидкий вертикальний текст
+  </marquee>
+</div>
+
+<!-- Кнопка назад на головну -->
+<div style="text-align:center;">
+  <a href="index.html" class="button">Назад до головної</a>
+</div>
+
+<script>
+  // Коливання для першого вертикального рядка
+  let vswing = document.getElementById('vswing');
+  let ypos = 0;
+  let vdir = 1;
+  setInterval(() => {
+    ypos += vdir * 1.5; // швидкість коливання
+    if(ypos > 20 || ypos < -20) vdir *= -1;
+    vswing.style.transform = `translateY(${ypos}px)`;
+  }, 50);
+</script>
+
+</body>
+</html>
