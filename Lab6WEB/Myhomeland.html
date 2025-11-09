@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<title>Моя Батьківщина — IvanennkoLab06-3</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f6fbff;
+    margin: 0;
+    padding: 20px;
+    color: #222;
+    text-align: center;
+  }
+
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    color: #034f84;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 18px;
+  }
+
+  .card {
+    position: relative;
+    width: 280px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,.08);
+  }
+
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .3s;
+  }
+
+  .card:hover img {
+    transform: scale(1.07);
+  }
+
+  .caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 12px;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
+    color: #fff;
+    transform: translateY(100%);
+    transition: transform .25s;
+  }
+
+  .card:hover .caption {
+    transform: translateY(0);
+  }
+
+  .caption h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .caption p {
+    margin: 6px 0 0;
+    font-size: 13px;
+    opacity: .95;
+  }
+
+  .note {
+    font-size: 14px;
+    color: #444;
+    margin-top: 14px;
+  }
+
+  /* Стиль кнопки */
+  .btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #034f84;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .btn:hover {
+    background-color: #0566c1;
+    transform: scale(1.05);
+  }
+
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Моя Батьківщина</h1>
+    <p class="note">Кілька місць рідного краю. Наведіть курсор на фото, щоб побачити короткий опис.</p>
+
+    <div class="gallery">
+      <div class="card">
+        <img src="images/land1.jpg" alt="Місто X — панорама">
+        <div class="caption">
+          <h3>Місто Полтава</h3>
+          <p>Опис: Центр міста з висоти птичого польоту.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/land2.jpg" alt="Лісова зона">
+        <div class="caption">
+          <h3>Лісова зона</h3>
+          <p>Опис: улюблене місце прогулянок, ліс і старі стежки.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/land3.jpg" alt="Пам'ятка архітектури">
+        <div class="caption">
+          <h3>Пам'ятка архітектури</h3>
+          <p>Опис: місцева фортеця — історичний символ регіону.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Кнопка повернення -->
+    <div>
+      <a href="index.html" class="btn">← На домашню сторінку</a>
+    </div>
+  </div>
+</body>
+</html>
