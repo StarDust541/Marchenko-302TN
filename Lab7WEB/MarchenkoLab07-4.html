@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №7. Завдання 4</title>
+</head>
+<body bgcolor="#F4F7F9"> <center>
+        <h2 style="color: #006400; font-family: Tahoma;">🛒 Завдання 3. Форма замовлення на товар</h2>
+    </center>
+
+    <center>
+    <form action="success_form.html" method="post" target="_blank">
+        <table border="1" cellpadding="10" cellspacing="0" width="700" bgcolor="#FFFFFF" style="border-collapse: collapse;">
+            
+            <tr>
+                <td colspan="2" bgcolor="#E0F2E9">
+                    <h3 style="color: #006400;">💰 Платіжна інформація</h3>
+                </td>
+            </tr>
+            
+            <tr>
+                <td width="40%"><label for="bank_acc">Номер банківського рахунку (IBAN):</label></td>
+                <td width="60%">
+                    <input type="text" id="bank_acc" name="iban" size="45" maxlength="34" value="UA00000000000000000000000000" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="personal_id">Особистий номер / ID користувача:</label></td>
+                <td>
+                    <input type="password" id="personal_id" name="user_id" size="30" maxlength="15" required>
+                    (Приховується)
+                </td>
+            </tr>
+
+            <tr>
+                <td>Вид оплати:</td>
+                <td>
+                    <fieldset style="border: 1px solid #CCCCCC; padding: 10px;">
+                        <legend style="color: #006400;">Оберіть метод:</legend>
+                        <input type="radio" id="cash" name="payment_type" value="Готівковий" checked> 
+                        <label for="cash">Готівковий розрахунок</label>
+                        <br>
+                        <input type="radio" id="card" name="payment_type" value="Безготівковий"> 
+                        <label for="card">Безготівковий розрахунок</label>
+                    </fieldset>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" bgcolor="#FFF8E0">
+                    <h3 style="color: #B35900;">📦 Вибір товару та деталі замовлення</h3>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="products">Оберіть товари (можна вибрати декілька):</label></td>
+                <td>
+                    <select id="products" name="selected_products" size="5" multiple required>
+                        <option value="laptop">Ноутбук "Quantum"</option>
+                        <option value="monitor">Монітор 27"</option>
+                        <option value="keyboard" selected>Механічна клавіатура</option>
+                        <option value="mouse">Бездротова миша</option>
+                        <option value="webcam">Веб-камера Full HD</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="comments">Довільні коментарі до замовлення:</label></td>
+                <td>
+                    <textarea id="comments" name="order_comments" rows="4" cols="50">Наприклад: "Доставку здійснити після 16:00..."</textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" bgcolor="#E0F2E9">
+                    <h3 style="color: #006400;">📄 Додаткова інформація при відповіді</h3>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="2">
+                    <fieldset style="border: 1px dashed #006400; padding: 10px;">
+                        <legend style="color: #006400;">Бажана інформація:</legend>
+                        <input type="checkbox" id="balance" name="info_balance" value="yes"> 
+                        <label for="balance">Дані про залишки на рахунку</label>
+                        <br>
+                        <input type="checkbox" id="payments" name="info_payments" value="yes"> 
+                        <label for="payments">Список останніх виплат по рахунку</label>
+                    </fieldset>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center" bgcolor="#C2D9EF">
+                    <input type="submit" value="✅ ОФОРМИТИ ЗАМОВЛЕННЯ ТА ПІДТВЕРДИТИ">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="reset" value="❌ Анулювати">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+    </center>
+
+</body>
+</html>

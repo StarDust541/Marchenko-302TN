@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №7. Анкета (Контрастний Дизайн)</title>
+</head>
+<body bgcolor="#F4F7F9"> <center>
+        <h2 style="color: #004D99; font-family: Tahoma;">📋 Анкета для реєстрації користувача</h2>
+    </center>
+
+    <center>
+    <form action="success_form.html" method="post" target="_blank">
+        <table border="1" cellpadding="10" cellspacing="0" width="650" bgcolor="#FFFFFF" style="border-collapse: collapse;">
+            
+            <tr>
+                <td colspan="2" bgcolor="#E6F2FF">
+                    <h3 style="color: #004D99;">1. Особиста інформація</h3>
+                </td>
+            </tr>
+            
+            <tr>
+                <td width="30%">Прізвище, Ім'я, По батькові:</td>
+                <td width="70%"><input type="text" id="pib" name="pib" size="55" required></td>
+            </tr>
+            
+            <tr>
+                <td>Дата народження:</td>
+                <td><input type="date" id="dob" name="dob"></td>
+            </tr>
+
+            <tr>
+                <td>Стать:</td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="Чоловіча"> 
+                    <label for="male">Чоловіча</label>
+                    <input type="radio" id="female" name="gender" value="Жіноча"> 
+                    <label for="female">Жіноча</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" bgcolor="#D6E6F2">
+                    <h3 style="color: #004D99;">2. Освіта та Професійні навички</h3>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Рівень освіти:</td>
+                <td>
+                    <select id="education" name="education">
+                        <option value="school" selected>Середня</option>
+                        <option value="college">Фахова передвища</option>
+                        <option value="bachelor">Базова вища (Бакалавр)</option>
+                        <option value="master">Повна вища (Магістр)</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Знання мов :</td>
+                <td>
+                    <input type="checkbox" id="english" name="lang_en" value="English"> 
+                    <label for="english">Англійська</label>
+                    <input type="checkbox" id="german" name="lang_de" value="German"> 
+                    <label for="german">Німецька</label>
+                    <input type="checkbox" id="polish" name="lang_pl" value="Polish"> 
+                    <label for="polish">Польська</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" bgcolor="#E6F2FF">
+                    <h3 style="color: #004D99;">3. Додаткова інформація та файли</h3>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Прикріпіть резюме (.pdf):</td>
+                <td><input type="file" id="resume" name="resume_file" accept=".pdf" size="45"></td>
+            </tr>
+            
+            <tr>
+                <td><label for="add_info">Коротка довідка про себе:</label></td>
+                <td>
+                    <textarea id="add_info" name="add_info" rows="5" cols="50"></textarea>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="2" align="center" bgcolor="#C2D9EF">
+                    <input type="submit" value="✅ ЗАРЕЄСТРУВАТИСЯ ТА НАДІСЛАТИ АНКЕТУ">
+                    &nbsp;&nbsp;&nbsp; <input type="reset" value="🗑️ Очистити поля">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+    </center>
+
+</body>
+</html>

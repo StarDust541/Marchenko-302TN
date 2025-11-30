@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №7. Завдання 2</title>
+</head>
+<body>
+
+    <h2>Завдання 1. Форма з усіма типами елементів</h2>
+
+    <form action="success_form.html" method="post" target="_blank">
+        
+        <p>
+            <label for="username">Ім'я користувача (TEXT):</label>
+            <input type="text" id="username" name="username" size="30" maxlength="50" value="Ваше ім'я">
+        </p>
+
+        <p>
+            <label for="userpass">Пароль (PASSWORD):</label>
+            <input type="password" id="userpass" name="userpass" size="20" maxlength="15">
+        </p>
+
+        <p>
+            <label for="comments">Коментарі (TEXTAREA):</label><br>
+            <textarea id="comments" name="comments" cols="50" rows="4" wrap="soft">Введіть ваші коментарі тут.</textarea>
+        </p>
+
+        <fieldset>
+            <legend>Оберіть опції (CHECKBOX):</legend>
+            <input type="checkbox" id="option1" name="opt1" value="yes" checked> 
+            <label for="option1">Опція 1</label><br>
+            <input type="checkbox" id="option2" name="opt2" value="yes"> 
+            <label for="option2">Опція 2</label>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Виберіть колір (RADIOBUTTON):</legend>
+            <input type="radio" id="red" name="color" value="red" checked> 
+            <label for="red">Червоний</label><br>
+            <input type="radio" id="blue" name="color" value="blue"> 
+            <label for="blue">Синій</label><br>
+            <input type="radio" id="green" name="color" value="green"> 
+            <label for="green">Зелений</label>
+        </fieldset>
+        <br>
+
+        <p>
+            <label for="country">Оберіть країну (SELECT):</label>
+            <select id="country" name="country" size="1">
+                <option value="ua" selected>Україна</option>
+                <option value="pl">Польща</option>
+                <option value="de">Німеччина</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="upload_file">Завантажити документ (FILE):</label>
+            <input type="file" id="upload_file" name="uploaded_doc" size="40" accept=".pdf">
+        </p>
+
+        <p>
+            <input type="button" value="Показати час" onclick="alert(new Date().toLocaleTimeString());">
+        </p>
+
+        <p>
+            <input type="submit" value="Відправити все">
+            <input type="reset" value="Скинути форму">
+        </p>
+
+    </form>
+
+</body>
+</html>
