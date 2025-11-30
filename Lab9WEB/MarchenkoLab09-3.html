@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна 9, Завдання 3 - Спеціалізовані класи</title>
+
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 20px;
+            background-color: #e8e8e8;
+        }
+
+        h1 {
+            color: #004d40;
+        }
+
+        /* Клас для елементів меню */
+        .menu {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #00796b; /* Темно-бірюзовий */
+            border: 1px solid #00796b;
+            padding: 10px 15px;
+            background-color: #ccf2ef;
+            display: inline-block; /* Для горизонтального відображення */
+            margin-right: 10px;
+            text-decoration: none;
+        }
+        .menu:hover {
+            background-color: #00796b;
+            color: white;
+        }
+
+        /* Клас для невеликих інформаційних повідомлень (ім'я автора, адреса) */
+        .small-info {
+            font-size: 10pt; /* Невеликий розмір */
+            font-style: italic;
+            color: #777777;
+            display: block;
+            margin-top: 30px;
+            border-top: 1px solid #ccc;
+            padding-top: 5px;
+        }
+
+        .content-text {
+            margin-top: 30px;
+            padding: 15px;
+            border: 1px dashed #777;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Лабораторна 9, Завдання 3: Спеціалізовані класи</h1>
+
+    <h2>Меню навігації (Клас `.menu`)</h2>
+    <div class="content-text">
+        <a href="#" class="menu">Головна</a>
+        <a href="#" class="menu">Про нас</a>
+        <a href="#" class="menu">Послуги</a>
+        <a href="#" class="menu">Контакти</a>
+    </div>
+
+    <h2>Основний вміст сторінки</h2>
+    <p>
+        Цей розділ містить основну інформацію. Спеціалізовані класи допомагають відокремити навігаційні та інформаційні елементи від основного вмісту, роблячи структуру сторінки чистою та логічною.
+    </p>
+
+    <div class="small-info">
+        <p>Ім'я автора: Marchenko </p>
+        <p>Поточна сторінка: /LabRab09/MarchenkoLab09-3.html </p>
+        <p>Дата створення: 30.11.2025</p>
+    </div>
+
+</body>
+</html>

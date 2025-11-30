@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна 9, Завдання 2 - Вільні класи</title>
+    
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 20px;
+            background-color: #fff8e1; /* Світлий бежевий фон */
+        }
+
+        /* 1. Клас для назви розділу (застосовується до h2) */
+        .section-title {
+            font-size: 24pt;
+            font-weight: bolder;
+            color: #4a148c; /* Глибокий фіолетовий */
+            border-bottom: 2px solid #4a148c;
+            margin-top: 40px;
+        }
+
+        /* 2. Клас для основного тексту (застосовується до p) */
+        .main-text {
+            font-size: 14pt;
+            line-height: 1.6;
+            text-align: justify;
+            text-indent: 40px; /* Відступ */
+            color: #333333;
+        }
+
+        /* 3. Клас для виноски (застосовується до p) */
+        .footnote {
+            font-size: 10pt;
+            font-style: italic;
+            color: #666666;
+            margin-top: 5px;
+            border-left: 3px solid #ccc;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Лабораторна 9, Завдання 2: "Вільні" класи</h1>
+
+    <h2 class="section-title">Вільні класи та їх універсальність</h2>
+    <p class="main-text">
+        "Вільні класи" (Free Classes) є найзручнішим способом стилізації, оскільки вони не прив'язані до конкретного тегу. Ми можемо використовувати клас **.main-text** для оформлення параграфів, а також, при потребі, застосувати його до елементів `div` або `span`.
+    </p>
+    <p class="footnote">
+        *Зверніть увагу: клас .footnote використано тут для форматування примітки.
+    </p>
+
+    <h2 class="section-title">Синтаксис та застосування</h2>
+    <p class="main-text">
+        В CSS такі класи визначаються через крапку (`.`), а в HTML-тезі вони викликаються за допомогою атрибута `class="ім'я_класу"`. Це дозволяє легко підтримувати єдиний візуальний стиль для різних типів контенту на веб-сторінці.
+    </p>
+    <p class="footnote">
+        *Клас виноски використано повторно, демонструючи легкість його застосування.
+    </p>
+
+</body>
+</html>
