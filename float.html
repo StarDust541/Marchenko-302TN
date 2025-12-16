@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 1: Float</title>
+    <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 0; font-family: sans-serif; }
+    
+    .clearfix::after { content: ""; clear: both; display: table; }
+
+    .wrapper {
+        padding: 3px;
+        background: #fff;
+        overflow: hidden; 
+    }
+
+    .box {
+        border: 1px solid white;
+        color: white; font-weight: bold;
+        display: flex; align-items: center; justify-content: center;
+        float: left;
+        width: 100%;
+        margin-bottom: 3px;
+        min-height: 100px; 
+    }
+
+   
+    .header { background: #5b9bd5; }
+    .sidebar { background: #70757a; }
+    .teal { background: #5ccdc9; }
+    .red { background: #e06b6b; }
+    .yellow { background: #ffc000; }
+    .green { background: #319c6e; }
+    .footer { background: #c55a11; margin-bottom: 0; clear: both; }
+
+    /* --- АДАПТИВНІСТЬ --- */
+
+  
+    @media (min-width: 500px) {
+        .teal, .red, .green, .yellow { width: calc(50% - 1.5px); }
+        .teal, .green { margin-right: 3px; }
+    }
+
+
+    @media (min-width: 750px) {
+        .header { width: 100%; }
+
+        .teal, .red, .green, .yellow { width: calc(33.33% - 2px); margin-right: 3px; }
+        .yellow { margin-right: 0; } 
+       
+        .sidebar { width: 30%; float: right; height: 300px; margin-top: -306px; } 
+        .teal, .red, .green, .yellow { width: 34%; } 
+      
+        .teal, .red, .green, .yellow { float: left; width: calc(35% - 3px); } 
+        .sidebar { width: 30%; float: right; height: auto; margin: 0; }
+
+        .teal, .red, .green, .yellow { width: calc(50% - 1.5px); }
+        .sidebar { width: 100%; } 
+    }
+
+    
+    @media (min-width: 950px) {
+        .header { width: 100%; }
+        .sidebar { width: 25%; float: right; height: 400px; margin-bottom: 3px;}
+        .teal { width: calc(30% - 3px); margin-right: 3px; }
+        .red { width: 45%; margin-right: 0; }
+        .green { width: 45%; margin-right: 3px; float: left; clear: left; }
+        .yellow { width: calc(30% - 3px); margin-right: 0; }
+    }
+
+  
+    @media (min-width: 1200px) {
+        .sidebar { width: 20%; height: 500px; }
+        .teal { width: calc(40% - 3px); height: 250px; }
+        .red { width: 40%; height: 250px; }
+        .green { width: 40%; height: 250px; }
+        .yellow { width: calc(40% - 3px); height: 250px; }
+    }
+</style>
+</head>
+<body>
+    <div class="wrapper clearfix">
+        <div class="main-content clearfix">
+            <div class="box header">Header</div>
+            <div class="clearfix">
+                <div class="box teal">Teal</div>
+                <div class="box red">Red</div>
+            </div>
+            <div class="clearfix">
+                <div class="box green">Green</div>
+                <div class="box yellow">Yellow</div>
+            </div>
+        </div>
+        
+        <div class="box sidebar">Sidebar</div>
+        <div class="box footer">Footer</div>
+    </div>
+</body>
+</html>

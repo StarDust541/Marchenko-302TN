@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 2: Flexbox</title>
+   <style>
+    body, html { margin: 0; padding: 0; height: 100%; font-family: sans-serif; }
+    .wrapper { display: flex; flex-direction: column; padding: 3px; gap: 3px; min-height: 100vh; }
+    .box { border: 1px solid white; color: white; font-weight: bold; display: flex; align-items: center; justify-content: center; padding: 20px; }
+    
+    
+    .header { background: #5b9bd5; min-height: 100px; }
+    .sidebar { background: #70757a; }
+    .teal { background: #5ccdc9; }
+    .red { background: #e06b6b; }
+    .yellow { background: #ffc000; }
+    .green { background: #319c6e; }
+    .footer { background: #c55a11; min-height: 80px; }
+
+
+    .middle { display: flex; flex-direction: column; gap: 3px; flex: 1; }
+    .content { display: flex; flex-direction: column; gap: 3px; }
+    .row { display: flex; flex-direction: column; gap: 3px; }
+
+
+    @media (min-width: 500px) {
+        .row { flex-direction: row; }
+        .row > div { flex: 1; min-height: 150px; }
+    }
+
+
+    @media (min-width: 750px) {
+        .middle { flex-direction: row; }
+        .content { flex: 2; }
+        .sidebar { flex: 1; order: 2; } 
+    }
+
+    
+    @media (min-width: 950px) {
+        .content { flex: 3; }
+        .sidebar { flex: 1; }
+    }
+
+    
+    @media (min-width: 1200px) {
+        .content { flex: 4; }
+        .sidebar { flex: 1.5; }
+        .header { min-height: 150px; }
+    }
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box header">Header</div>
+
+        <div class="middle-section">
+            <div class="content-col">
+                <div class="row-group">
+                    <div class="box teal">Teal</div>
+                    <div class="box red">Red</div>
+                </div>
+                <div class="row-group">
+                    <div class="box green">Green</div>
+                    <div class="box yellow">Yellow</div>
+                </div>
+            </div>
+            
+            <div class="box sidebar">Sidebar</div>
+        </div>
+
+        <div class="box footer">Footer</div>
+    </div>
+</body>
+</html>
