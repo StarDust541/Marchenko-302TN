@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #141414;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+a:hover {
+  color: #ff6b00;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  background-color: #1f1f1f;
+  border-bottom: 2px solid #333;
+  padding: 15px 0;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.logo__icon {
+  color: #ff6b00;
+  margin-right: 5px;
+}
+.logo .highlight {
+  color: #ff6b00;
+}
+
+.nav__list {
+  display: flex;
+  gap: 20px;
+}
+.nav__link {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 0;
+}
+.nav__link.active {
+  border-bottom: 2px solid #00a8ff;
+}
+.nav__link:hover {
+  color: #ff6b00;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn-search {
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn-login {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.main {
+  padding-top: 30px;
+}
+
+.category {
+  margin-bottom: 40px;
+}
+.category__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+.category__title {
+  font-size: 20px;
+  font-weight: normal;
+}
+.category__link-all {
+  color: #a5a5a5;
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+.card__img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  aspect-ratio: 2/3;
+}
+.card__img-wrapper:hover img {
+  transform: scale(1.05);
+}
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.card__badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 107, 0, 0.9);
+  color: white;
+  font-size: 12px;
+  padding: 2px 5px;
+}
+.card__title {
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+}
+.card__title a {
+  color: #a5a5a5;
+}
+.card__title a:hover {
+  color: #ffffff;
+}
