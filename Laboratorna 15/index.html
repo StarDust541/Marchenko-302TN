@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторне заняття 15</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        button { 
+            display: block; 
+            margin: 10px 0; 
+            padding: 10px 15px; 
+            cursor: pointer; 
+            background-color: #f0db4f; 
+            border: 1px solid #323330;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        button:hover { background-color: #ffe600; }
+        #output { margin-top: 20px; padding: 10px; border: 1px solid #ccc; background: #f9f9f9; min-height: 50px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h1>Практика (Заняття 15)</h1>
+
+    <button onclick="task1()">Завдання 1: Прості числа (0-100)</button>
+    <button onclick="task2()">Завдання 2: Парні/непарні (0-10)</button>
+    <button onclick="task3()">Завдання 3: Ділення 10000</button>
+    <button onclick="task4()">Завдання 4: Пори року та місяці</button>
+    <button onclick="task5()">Завдання 5: Цельсій -> Фаренгейт</button>
+    <button onclick="task6()">Завдання 6: День тижня</button>
+
+    <div id="output">Результат </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
